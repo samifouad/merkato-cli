@@ -5,13 +5,13 @@ import * as core from './core/index'
 const program = new Command()
 
 program
-    .name('gild')
+    .name('merkato')
     .version('0.1.0')
-    .description('https://gild.gg')
+    .description('commerce infrastructure')
   
 program
     .command('new')
-    .description('create a new .gild folder')
+    .description('create a new shop in current folder')
     .action(async () => {
         await core.init()
     })

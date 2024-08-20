@@ -5,10 +5,10 @@ import { create_directory } from './lib/create_directory'
 import { create_file } from './lib/create_file'
 
 export async function init() {
-    const spinner = createSpinner('task: create .gild folder').start();
+    const spinner = createSpinner('task: create .merkato folder').start();
 
     // check for existing folder
-    const { exitCode: gf_exitCode } = await check_existing('.gild')
+    const { exitCode: gf_exitCode } = await check_existing(process.platform, '.merkato')
 
     if (gf_exitCode === 0) {
         spinner.error()
@@ -17,7 +17,7 @@ export async function init() {
     }
 
     // create directory
-    const { exitCode: gd_exitCode } = await create_directory('.gild')
+    const { exitCode: gd_exitCode } = await create_directory('.merkato')
 
     if (gd_exitCode !== 0) {
         spinner.error()
@@ -26,7 +26,7 @@ export async function init() {
     }
 
     // create configuration file
-    const { exitCode: gcf_exitCode } = await create_file('.gild', 'infra.toml', 'toml')
+    const { exitCode: gcf_exitCode } = await create_file('.merkato', 'shop.toml', 'toml')
 
     if (gcf_exitCode !== 0) {
         spinner.error()

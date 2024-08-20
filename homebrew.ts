@@ -14,9 +14,9 @@ const c= JSON.parse(fs.readFileSync(jsonFilePath, 'utf8'));
 console.log(c)
 
 // Generate Ruby file content
-const rubyFileContent = `class Gild < Formula
-  desc "Infrastructure as code"
-  homepage "https://gild.gg"
+const rubyFileContent = `class Merkato < Formula
+  desc "commerce infrastructure"
+  homepage "https://samifouad.com/projects/merkato-cli"
   version "${c.version}"
   license "Apache-2.0"
 
@@ -34,13 +34,13 @@ const rubyFileContent = `class Gild < Formula
   end
 
   def install
-    bin.install "gild"
+    bin.install "merkato"
   end
 end
 `;
 
 // Define the output file name
-const outputFileName = 'homebrew-gild/Formula/gild.rb';
+const outputFileName = 'homebrew-merkato/Formula/merkato.rb';
 
 // Write the generated content to a Ruby file
 fs.writeFileSync(outputFileName, rubyFileContent);

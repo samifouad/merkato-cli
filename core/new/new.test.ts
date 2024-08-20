@@ -8,7 +8,7 @@ import { create_file } from './lib/create_file'
 describe("command: new", () => {
     beforeAll(async () => {
         try {
-            await $`rm -r .gildtest`.quiet()
+            await $`rm -r .merkatotest`.quiet()
         } catch(e) {
             console.error('issue deleting test folder')
         }
@@ -18,49 +18,49 @@ describe("command: new", () => {
     const linux = process.platform === "linux"
     test.if(linux)("check_existing() - linux", async () => {
         expect(async () => {
-            const { exitCode: exitCode_cel } = await check_existing('linux', '.gildtest')
+            const { exitCode: exitCode_cel } = await check_existing('linux', '.merkatotest')
         }).not.toThrow()    
     })
 
     const macos = process.platform === "darwin"
     test.if(macos)("check_existing() - macos", async () => {
         expect(async () => {
-            const { exitCode: exitCode_cem } = await check_existing('darwin', '.gildtest')
+            const { exitCode: exitCode_cem } = await check_existing('darwin', '.merkatotest')
         }).not.toThrow()
     })
 
     const windows = process.platform === "win32"
     test.if(windows)("check_existing() - windows", async () => {
         expect(async () => {
-            const { exitCode: exitCode_cew } = await check_existing('win32', '.gildtest')
+            const { exitCode: exitCode_cew } = await check_existing('win32', '.merkatotest')
         }).not.toThrow()
     })
 
     test("create_directory()", async () => {
-        const { exitCode: exitCode_cd } = await create_directory('.gildtest')
+        const { exitCode: exitCode_cd } = await create_directory('.merkatotest')
         expect(exitCode_cd).toBe(0)
     })
 
     // TODO: sanitization needed to force throw
     test("create_directory() - bad", async () => {
         expect(async () => {
-            const { exitCode: exitCode_cd } = await create_directory('.gildtest')
+            const { exitCode: exitCode_cd } = await create_directory('.merkatotest')
         }).toThrow()
     })
 
     test("create_file() - toml", async () => {
-        const { exitCode: exitCode_cf } = await create_file('.gildtest', 'infra.toml', 'toml')
+        const { exitCode: exitCode_cf } = await create_file('.merkatotest', 'shop.toml', 'toml')
         expect(exitCode_cf).toBe(0)
     })
 
     test("create_file() - json", async () => {
-        const { exitCode: exitCode_cfj } = await create_file('.gildtest', 'infra.json', 'json')
+        const { exitCode: exitCode_cfj } = await create_file('.merkatotest', 'shop.json', 'json')
         expect(exitCode_cfj).toBe(0)
     })
 
     test("create_file() - md", async () => {
         expect(async () => {
-            const { exitCode: exitCode_cfm } = await create_file('.gildtest', 'infra.md', 'md')
+            const { exitCode: exitCode_cfm } = await create_file('.merkatotest', 'shop.md', 'md')
         }).toThrow()
     })
 })

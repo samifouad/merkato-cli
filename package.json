@@ -1,9 +1,9 @@
 {
-  "name": "gild-cli",
+  "name": "merkato-cli",
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "make": "bun build ./index.ts --compile --outfile dist/gild"
+    "make": "bun build ./index.ts --compile --outfile dist/merkato"
   },
   "devDependencies": {
     "@types/bun": "latest"

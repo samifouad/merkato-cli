@@ -3,6 +3,7 @@
 documentation coming soon
 
 ## installation
+
 install with [npm](https://npmjs.com): ```npm install -g @samifouad/merkato```
 
 install with [bun](https://bun.sh): ```bun add -g @samifouad/merkato```

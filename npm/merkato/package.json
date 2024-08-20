@@ -1,0 +1,30 @@
+{
+    "name": "@samifouad/merkato",
+    "description": "commerce infrastructure",
+    "bin": {
+      "gild": "./bin.js"
+    },
+    "repository": "https://github.com/samifouad/merkato-cli",
+    "homepage": "https://samifouad.com/projects/merkato-cli",
+    "keywords": [
+      "merkato",
+      "cli",
+      "store",
+      "shop",
+      "commerce",
+      "ecommerce",
+      "sami",
+      "samifouad",
+      "fromafrica",
+      "from africa",
+      "from africa with love"
+    ],
+    "author": "Sami Fouad - @fromafrica",
+    "license": "Apache-2.0",
+    "optionalDependencies": {
+      "@samifouad/merkato-darwin-arm64": "*",
+      "@samifouad/merkato-darwin-x64": "*",
+      "@samifouad/merkato-linux-x64": "*",
+      "@samifouad/merkato-windows-x64": "*"
+    }
+  }
