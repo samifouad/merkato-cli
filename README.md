@@ -1,6 +1,6 @@
-# merkato-cli
+this cli tool helps power the stores that people launch when using the fromafri.ca service
 
-documentation coming soon
+more details to come soon
 
 ## installation
 install with [npm](https://npmjs.com): ```npm install -g @samifouad/merkato```
